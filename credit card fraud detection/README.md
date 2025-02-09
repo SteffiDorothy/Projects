@@ -13,7 +13,7 @@ The objective of this project is to build a machine learning model that can iden
 
 ### **Key Features of the Model**
 * **Classification:** The model classifies transactions into two categories: fraudulent and legitimate.
-* **Feature Selection:** Selected features include transaction amount, time of day, location, and other relevant data points. We focus on reducing data imbalance and handling missing data to ensure the model's robustness.
+* **Feature Selection:** Selected features include transaction amount, time of day, location, and other relevant data points. I focus on reducing data imbalance and handling missing data to ensure the model's robustness.
 * **Algorithms Used:**
   * Decision Trees
   * Random Forest
@@ -22,7 +22,7 @@ The objective of this project is to build a machine learning model that can iden
   * Support Vector Machines (SVM)
 
 ### **Model Evaluation Metrics**
-To evaluate the model's performance, we used the following metrics:
+To evaluate the model's performance, I used the following metrics:
 * Accuracy
 * Precision
 * Recall
