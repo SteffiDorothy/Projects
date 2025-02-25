@@ -20,8 +20,8 @@ This project involves conducting an Exploratory Data Analysis (EDA) on a large e
    ```bash
    pip install pandas numpy matplotlib
 
-##Visualizations
+## Visualizations
 The project includes visualizations showcasing sales trends, category-wise performance, and customer retention patterns. Please refer to the provided charts for detailed insights.
 
-##Conclusion
+## Conclusion
 This analysis provides actionable insights into customer purchasing behavior, enabling better decision-making for marketing and product strategies.
