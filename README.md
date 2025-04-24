@@ -22,5 +22,8 @@ This folder showcases my data science, machine learning, and business intelligen
 6. **Credit Card Fraud Detection**
    - Developed anomaly detection models to identify fraudulent credit card transactions using machine learning.
 
+7. **Effectiveness of Data Synthesized by Generative AI in Supervised Image Classification**
+   - Investigated the role of synthetic image data, generated using Generative AI models, in improving the performance of supervised image classification models. This project explores the use of various real-to-synthetic data ratios to train Convolutional Neural Networks (CNN) and assess classification accuracy. Synthetic data is generated using Stable Diffusion to enhance the real dataset and improve model performance.
+
 Feel free to explore each project for detailed information and insights.
 
