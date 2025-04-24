@@ -44,17 +44,17 @@ We trained a Convolutional Neural Network (CNN) with different real-to-synthetic
 - F1-Score
 
 ## 📁 Folder Structure
-Final Presentation Group9.pdf # Final presentation slides summarizing the project 
+- Final Presentation Group9.pdf # Final presentation slides summarizing the project 
 
-DataPreprocessing.ipynb # Notebook for data cleaning, formatting, and organization 
+- DataPreprocessing.ipynb # Notebook for data cleaning, formatting, and organization 
 
-Report.pdf # Full project report with background, methods, and results 
+- Report.pdf # Full project report with background, methods, and results 
 
-machine_learning_model_CNN_synthetic.py # Python script for CNN architecture and synthetic training 
+- machine_learning_model_CNN_synthetic.py # Python script for CNN architecture and synthetic training 
 
-model_training.ipynb # Main training and evaluation notebook 
+- model_training.ipynb # Main training and evaluation notebook 
 
-model_training copy.ipynb # Backup of model training notebook
+- model_training copy.ipynb # Backup of model training notebook
 
 
 ## 📊 Key Findings
