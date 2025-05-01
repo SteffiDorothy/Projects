@@ -37,23 +37,18 @@ python3 -m venv env
 source env/bin/activate  # Windows: env\Scripts\activate
 ```
 
-3. **Install dependencies**
-```bash
-pip install -r requirements.txt
-```
-
-4. **Apply migrations and load initial data**
+3. **Apply migrations and load initial data**
 ```bash
 python manage.py migrate
 python manage.py loaddata arxiv_papers.sql
 ```
 
-5. **Run the server**
+4. **Run the server**
 ```bash
 python manage.py runserver
 ```
 
-6. **Access the application**
+5. **Access the application**
 - Open your browser and navigate to: `http://127.0.0.1:8000/`
 
 ## 📈 Project Structure
@@ -66,7 +61,6 @@ CS547-IR-Scholarly-Search/
 ├── static/                  # Static files (CSS, JS)
 ├── db.sqlite3               # Database file
 ├── arxiv_papers.sql         # Preloaded papers dataset
-└── requirements.txt         # Required Python packages
 ```
 
 ## 🤝 Contribution
@@ -74,9 +68,6 @@ Contributions are welcome! Feel free to open an issue or submit a pull request.
 
 ## 📄 License
 This project is licensed under the MIT License.
-
-## 📬 Contact
-For any queries, please contact [sisodiajatin](https://github.com/sisodiajatin).
 
 ---
 
