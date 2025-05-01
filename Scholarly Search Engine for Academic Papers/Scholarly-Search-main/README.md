@@ -27,7 +27,7 @@ This project is a scholarly search web application developed for the CS547 Infor
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/sisodiajatin/CS547-IR-Scholarly-Search.git
+git clone https://github.com/SteffiDorothy/Scholarly-Search.git
 cd CS547-IR-Scholarly-Search
 ```
 
