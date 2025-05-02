@@ -47,8 +47,8 @@ A database-driven application designed to streamline the operations of a grocery
    cd grocery-store-management-system
 
 3. **Set up the database**
-   -Run the provided SQL scripts to create tables.
-   -Update database connection settings in the code.
+   - Run the provided SQL scripts to create tables.
+   - Update database connection settings in the code.
 
 4. **Run the application**
    ```bash
@@ -56,5 +56,5 @@ A database-driven application designed to streamline the operations of a grocery
    python employee.py #To view employee side
 
 5. **Access the application**
-   -Open your browser and navigate to http://127.0.0.1:5000/home
+   - Open your browser and navigate to http://127.0.0.1:5000/home
 
