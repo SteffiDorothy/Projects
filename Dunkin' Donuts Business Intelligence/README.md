@@ -1,10 +1,15 @@
 # Dunkin' Donuts: Leveraging Business Intelligence for Innovation
 
 **Worcester Polytechnic Institute (WPI)**  
+
 **Course:** MIS 584 - Business Intelligence
+
 **Project Report:** Dunkin' Donuts Business Intelligence  
+
 **Team Member:** Steffi Dorothy
+
 **Instructor:** Prof. Daniel Treku
+
 **Date:** 05/03/2024
 
 ---
@@ -119,3 +124,9 @@ This project explores how Dunkin' Donuts can leverage Business Intelligence (BI)
 ---
 
 ✅ **Final Submission for MIS 584 - Business Intelligence: BI_Project_Report.pdf and Dunkin' Donuts Presentation**
+
+---
+
+## 💬 Contact
+
+For questions or collaboration opportunities, please reach out via GitHub or [LinkedIn](https://www.linkedin.com/in/steffi-dorothy-9938a21a3/)!
