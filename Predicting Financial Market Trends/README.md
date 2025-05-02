@@ -114,3 +114,10 @@ The project lays the groundwork for:
 ---
 
 ✅ **Final Submission for DS 501. Introduction to Data Science - Predicting Financial Market Trends: An AI Hedge Fund Approach**
+
+---
+
+## 💬 Contact
+
+For questions or collaboration opportunities, please reach out via GitHub or [LinkedIn](https://www.linkedin.com/in/steffi-dorothy-9938a21a3/)!
+
