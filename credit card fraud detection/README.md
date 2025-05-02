@@ -81,13 +81,14 @@ To evaluate the model's performance, I used the following metrics:
 
 ---
 
-## 💬 Contact
-
-For questions or collaboration opportunities, please reach out via GitHub or [LinkedIn](https://www.linkedin.com/in/steffi-dorothy-9938a21a3/)!
-
----
-
 ### 🚀 **Future Improvements**
 * **Real-time Fraud Detection:** Implement a real-time fraud detection system.
 * **Deep Learning Models:** Experiment with deep learning models like neural networks for fraud detection.
 * **Ensemble Methods:** Explore additional ensemble methods like stacking to improve performance
+
+---
+
+## 💬 Contact
+
+For questions or collaboration opportunities, please reach out via GitHub or [LinkedIn](https://www.linkedin.com/in/steffi-dorothy-9938a21a3/)!
+
