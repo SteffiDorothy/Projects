@@ -18,19 +18,11 @@ This project analyzes chess data from the Lichess platform using machine learnin
 
 - `DS502_Team_1_Leveraging_Chess_Game.ipynb` — Jupyter Notebook with full project code and analysis.
 - `DS502_Team_1_Leveraging_Chess_Game.pdf` — Project report.
-- `Project Team 1 DS502.pdf` — Project summary document.
+- `Project Team 1 DS502.pdf` — Project presentation slides.
 - `readme.md` — Project README.
 
 ---
 
-## ✨ Key Achievements
-
-- Developed a predictive model using decision tree regression to forecast chess player performance.
-- Performed extensive exploratory data analysis (EDA) to uncover trends, correlations, and patterns.
-- Applied feature engineering and preprocessing to improve data quality.
-- Visualized data insights using Python libraries (Matplotlib, Seaborn, Pandas).
-
----
 
 ## 🗂 Description of the Problem
 
@@ -96,6 +88,15 @@ We were motivated to apply data analysis techniques to understand the complexiti
 - Built a robust predictive model with meaningful accuracy.
 - Highlighted key factors influencing chess outcomes.
 - Gained insights into how player rating, openings, and game dynamics impact results.
+
+---
+
+## ✨ Key Achievements
+
+- Developed a predictive model using decision tree regression to forecast chess player performance.
+- Performed extensive exploratory data analysis (EDA) to uncover trends, correlations, and patterns.
+- Applied feature engineering and preprocessing to improve data quality.
+- Visualized data insights using Python libraries (Matplotlib, Seaborn, Pandas).
 
 ---
 
