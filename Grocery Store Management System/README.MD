@@ -34,12 +34,27 @@ A database-driven application designed to streamline the operations of a grocery
 - Database: ORACLE
 - Backend: Python / Flask
 - Frontend: HTML, CSS
-- Tools: VScode, GitHub
+- Tools: VSCode, GitHub
 
 ## 💾 Setup Instructions
 
 1. **Clone the repository**
    ```bash
-   git clone 
+   git clone https://github.com/SteffiDorothy/Projects.git
+
+2. **Navigate to the Grocery Store Management System folder**
+   ```bash
    cd grocery-store-management-system
+
+3. **Set up the database**
+   -Run the provided SQL scripts to create tables.
+   -Update database connection settings in the code.
+
+4. **Run the application**
+   ```bash
+   python grocerystoreapp.py #To view customer side
+   python employee.py #To view employee side
+
+5. **Access the application**
+   -Open your browser and navigate to http://127.0.0.1:5000/home
 
