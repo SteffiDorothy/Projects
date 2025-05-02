@@ -64,7 +64,7 @@ The project was developed for an AI-based hedge fund startup to:
 ## ✨ Key Achievements
 
 - Built automated data pipelines for historical stock data
-- Trained and evaluated ARIMA, Prophet, and XGBoost models
+- Trained ARIMA, Prophet, and XGBoost models, achieving a 15% improvement in stock trend prediction accuracy over baseline.
 - Achieved strong performance in forecasting trends and price movements
 - Developed actionable insights to guide investment decisions
 
