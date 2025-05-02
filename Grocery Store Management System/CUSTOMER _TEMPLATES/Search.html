@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What's in Store?</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        *{
+            text-decoration: none;
+        }
+        .navbar {
+            background: crimson;
+            font-family: calibri;
+            padding-right: 25px;
+            padding-left: 15px;
+        }
+        .navdiv {
+            display: flex;
+            align-items: center;
+        }
+        .logo a {
+            font-size: 35px;
+            font-weight: 600;
+            color: white;
+        }
+        li {
+            list-style: none;
+            display: inline-block;
+        }
+        li a {
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            margin-right: 25px;
+        }
+        li a {
+            text-decoration: none;
+        }
+
+        li a:hover {
+            color: #FFC107;
+            text-decoration: none;
+        }
+        button {
+            background-color: black;
+            margin-left: 10px;
+            border-radius: 10px;
+            padding: 10px;
+            width: 90px;
+        }
+        button a {
+            color: white;
+            font-weight: bold;
+            font-size: 15px;
+        }
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 1200px;
+            margin-top: 50px;  
+        }
+        .search-bar {
+            margin-top: 30px;  
+        }
+        .table-container {
+            margin-top: 20px; 
+        }
+        table {
+            width: 100%;
+            table-layout: fixed;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>The Daily Pick</h1>
+    </header>
+    
+    <nav class="navbar">
+        <div class="navbar">
+            <div class="logo"><a href="#"></a></div>
+            <ul>
+                <li><a href="/home">Home</a></li>
+                <li><a href="/shop">Shop</a></li>
+                <li><a href="/cart">Cart</a></li>
+                <li><a href="/contactus">Contact</a></li>
+                <li><a href="/recommend">Recommendations</a></li>
+            </ul>
+        </div>
+    </nav>
+  
+    <div class="container">
+        <div class="search-bar">
+            <form method="GET" action="/shop">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search..." name="search" value="{{ request.args.get('search', '') }}">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="submit">Search</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        
+        <div class="table-container">
+            <h2>Search Results</h2>
+            <table class="table table-striped">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Product</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Quantity</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for product in data %}
+                    <tr>
+                        <td>{{ product[1] }}</td>  
+                        <td>${{ product[2] | float | round(2) }}</td> 
+                        <td>{{ product[3] | int }}</td>
+                        <td style="width: 350px;">
+                            <div style="display: flex; gap: 10px; align-items: center;">
+                            <form method="POST" action="/add_to_cart" style="display: flex; gap: 5px; align-items: center; margin: 0;">
+                                <input type="hidden" name="commodityID" value="{{ product[0] }}">
+                                <input type="hidden" name="product_name" value="{{ product[1] }}">
+                                <input type="hidden" name="price" value="{{ product[2] | float | round(2) }}">
+                                <input type="number" name="quantity" value="1" min="1" max="{{ product[3] | int }}" style="width: 60px;">
+                                <button type="submit" class="btn btn-success btn-sm">Add To Cart</button>
+                            </form>
+                            <a href="{{ url_for('write_review', commodityName=product[1]) }}" class="btn btn-warning btn-sm">Write Review</a>
+                            </div>
+                        </td>
+                    </tr>
+                {% else %}
+                    <tr>
+                        <td colspan="4" class="text-center">No products found</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p>&copy; 2025 The Daily Pick. | All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>

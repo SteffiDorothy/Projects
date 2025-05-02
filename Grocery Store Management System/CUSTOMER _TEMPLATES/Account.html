@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Profile - The Daily Pick</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+
+        header {
+            color: white;
+            text-align: center;
+            padding: 10px 10px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 3em;
+            text-align: center;
+            color: rgb(0,0,0);
+        }
+
+        * {
+            text-decoration: none;
+        }
+
+        .navbar {
+            background: crimson;
+            font-family: calibri;
+            padding: 15px 25px;
+        }
+
+        .navdiv {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo a {
+            font-size: 35px;
+            font-weight: 600;
+            color: white;
+        }
+
+        ul {
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            list-style: none;
+            display: inline-block;
+        }
+
+        li a {
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            margin-right: 25px;
+        }
+        li a {
+            text-decoration: none;
+        }
+
+        li a:hover {
+            color: #FFC107;
+            text-decoration: none;
+        }
+        button {
+            background-color: black;
+            margin-left: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .info-label {
+            font-weight: bold;
+            margin-top: 15px;
+            color: #333;
+            display: block;
+        }
+
+        .info-value {
+            margin-bottom: 15px;
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        select, input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 1em;
+        }
+
+        .save-btn {
+            background-color: crimson;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            display: block;
+            margin: 20px auto 0;
+        }
+
+        .save-btn:hover {
+            background-color: #b8002e;
+        }
+
+        h3 {
+            margin-top: 30px;
+            color: #2f4f4f;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="navdiv">
+            <div class="logo"><a href="#">The Daily Pick</a></div>
+            <ul>
+                <li><a href="/home">Home</a></li>
+                <li><a href="/shop">Shop</a></li>
+                <li><a href="/cart">Cart</a></li>
+                <li><a href="/contactus">Contact</a></li>
+                <li><a href="/recommend">Recommendations</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header>
+        <h1>User Profile</h1>
+    </header>
+
+    <div class="container">
+
+    
+        <div id="account" class="tab-content active">
+            <div class="info-label">Username:</div>
+            <div class="info-value">{{ username }}</div>
+
+            <div class="info-label">Phone Number:</div>
+            <div class="info-value">{{ phone }}</div>
+
+            <div class="info-label">Payment Preference:</div>
+            <div class="info-value">{{ credit_card }}</div>
+
+            <h3>User Preferences</h3>
+            <form method="POST" action="/profile">
+
+                <label class="info-label" for="diet">Diet:</label>
+                <select name="diet" id="diet">
+                    <option value="">--Select--</option>
+                    <option value="Vegetarian" {% if diet == 'Vegetarian' %}selected{% endif %}>Vegetarian</option>
+                    <option value="Pescatarian" {% if diet == 'Pescatarian' %}selected{% endif %}>Pescatarian</option>
+                    <option value="Gluten-free" {% if diet == 'Gluten-free' %}selected{% endif %}>Gluten-free</option>
+                    <option value="Vegan" {% if diet == 'Vegan' %}selected{% endif %}>Vegan</option>
+                </select>
+
+                <label class="info-label" for="brand">Brand:</label>
+                <select name="brand" id="brand">
+                    <option value="">--Select--</option>
+                    <option value="FarmFresh" {% if brand == 'FarmFresh' %}selected{% endif %}>FarmFresh</option>
+                    <option value="SeaHarvest" {% if brand == 'SeaHarvest' %}selected{% endif %}>SeaHarvest</option>
+                    <option value="ButcherBlock" {% if brand == 'ButcherBlock' %}selected{% endif %}>ButcherBlock</option>
+                    <option value="BerryGood" {% if brand == 'BerryGood' %}selected{% endif %}>BerryGood</option>
+                </select>
+
+                <label class="info-label" for="budget">Max Budget ($):</label>
+                <input type="number" id="budget" name="budget" min="0" placeholder="Enter your budget" value="{{ budget }}">
+
+                <button type="submit" class="save-btn">Save Preferences</button>
+            </form>
+
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    <div class="flash-container">
+                        {% for category, message in messages %}
+                            <div class="flash-message {{ category }}">{{ message }}</div>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            {% endwith %}
+
+        </div>
+    </div>
+
+</body>
+</html>

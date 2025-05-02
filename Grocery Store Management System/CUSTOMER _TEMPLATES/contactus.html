@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        *{
+            text-decoration: none;
+        }
+        .navbar {
+            background: crimson;
+            font-family: calibri;
+            padding-right: 25px;
+            padding-left: 15px;
+        }
+        .navdiv {
+            display: flex;
+            align-items: center;
+        }
+        .logo a {
+            font-size: 35px;
+            font-weight: 600;
+            color: white;
+        }
+        li {
+            list-style: none;
+            display: inline-block;
+        }
+        li a {
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            margin-right: 25px;
+        }
+        li a {
+            text-decoration: none;
+        }
+
+        li a:hover {
+            color: #FFC107;
+            text-decoration: none;
+        }
+        button {
+            background-color: rgb(255, 255, 255);
+            margin-left: 10px;
+            border-radius: 10px;
+            padding: 10px;
+            width: 150px;
+        }
+        button a {
+            color: white;
+            font-weight: bold;
+            font-size: 15px;
+        }
+        .container {
+        max-width: 500px;
+        margin: 50px auto;
+        padding: 30px;
+        background: #ffffff;
+        border-radius: 15px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .contactus-form h2 {
+        text-align: center;
+        margin-bottom: 25px;
+        color: #333333;
+        }
+
+        .form-group {
+        margin-bottom: 20px;
+        }
+
+        .form-group label {
+        display: block;
+        font-weight: 600;
+        margin-bottom: 8px;
+        color: #555555;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+        width: 100%;
+        padding: 12px 15px;
+        border: 1px solid #cccccc;
+        border-radius: 8px;
+        font-size: 16px;
+        box-sizing: border-box;
+        }
+
+        textarea {
+        min-height: 120px;
+        resize: vertical;
+        }
+
+        .btn-submit {
+        display: block;
+        width: 100%;
+        padding: 12px;
+        background-color: #28a745;
+        color: #ffffff;
+        border: none;
+        border-radius: 8px;
+        font-size: 18px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        }
+
+        .btn-submit:hover {
+        background-color: #218838;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>The Daily Pick</h1>
+    </header>
+    <nav class="navbar">
+        <div class="navbar">
+            <div class="logo"><a href="#"></a></div>
+            <ul>
+                <li><a href="/home">Home</a></li>
+                <li><a href="/shop">Shop</a></li>
+                <li><a href="/cart">Cart</a></li>
+                <li><a href="/contactus">Contact</a></li>
+                <li><a href="/recommend">Recommendations</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="contactus-form">
+          <h2>Contact Us</h2>
+          <form method="post">
+            <div class="form-group">
+              <label for="Name">Name</label>
+              <input type="text" name="name" placeholder="Your Name" required>
+            </div>
+      
+            <div class="form-group">
+              <label for="Email">Email</label>
+              <input type="email" name="email" placeholder="Your Email" required>
+            </div>
+      
+            <div class="form-group">
+              <label for="Message">Message</label>
+              <textarea name="message" placeholder="Your Message" required></textarea>
+            </div>
+      
+            <button type="submit" class="btn-submit">Send Message</button>
+          </form>
+        </div>
+      </div>      
+</body>

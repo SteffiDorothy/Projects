@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recommended for You</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    * {
+      text-decoration: none;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8f9fa;
+    }
+    .navbar {
+      background: crimson;
+      padding: 15px 25px;
+    }
+    .navbar .logo a {
+      font-size: 32px;
+      font-weight: 700;
+      color: white;
+      text-decoration: none;
+    }
+    .navbar ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .navbar li {
+      display: inline-block;
+      margin-left: 25px;
+    }
+    .navbar li a {
+      color: white;
+      font-size: 18px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .navbar li a:hover {
+      color: #ffc107;
+    }
+    h2 {
+      margin-top: 40px;
+      text-align: center;
+      color: #333;
+      font-weight: 700;
+    }
+    form {
+      max-width: 600px;
+      margin: 30px auto;
+      padding: 30px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    form label {
+      font-weight: 600;
+    }
+    form input {
+      margin-bottom: 20px;
+    }
+    form button {
+    background-color: #FFC107;
+    color: #333;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    }
+    form button:hover {
+    background-color: #e0a800;
+    }
+
+    ul.product-list {
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 0;
+      list-style: none;
+    }
+    ul.product-list li {
+      background: white;
+      padding: 15px;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      font-weight: 500;
+      color: #555;
+    }
+    footer {
+      background: #343a40;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="navdiv d-flex justify-content-between align-items-center">
+      <div class="logo"><a href="#">Daily Pick</a></div>
+      <ul class="d-flex">
+        <li><a href="/home">Home</a></li>
+        <li><a href="/shop">Shop</a></li>
+        <li><a href="#">Deals</a></li>
+        <li><a href="/contactus">Contact</a></li>
+        <li><a href="/recommend">Recommendations</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <h2>Recommended For You</h2>
+
+  <form method="POST" action="{{ url_for('recommend') }}">
+    <div class="form-group">
+      <label for="category">Category:</label>
+      <input type="text" class="form-control" id="category" name="category" placeholder="Enter category">
+    </div>
+
+    <div class="form-group">
+      <label for="brand">Brand:</label>
+      <input type="text" class="form-control" id="brand" name="brand" placeholder="Enter brand">
+    </div>
+
+    <div class="form-group">
+      <label for="dietary">Dietary Restrictions:</label>
+      <input type="text" class="form-control" id="dietary" name="dietary" placeholder="Enter dietary preferences">
+    </div>
+
+    <button type="submit" class="btn btn-block">Get Recommendations</button>
+  </form>
+
+  <ul class="product-list">
+    {% if products %}
+      {% for product in products %}
+        <li>{{ product.name }} - ${{ product.price }}</li>
+      {% endfor %}
+    {% else %}
+      <li>No matches found.</li>
+    {% endif %}
+  </ul>
+
+  <footer>
+    <p>&copy; 2025 The Daily Pick. | All Rights Reserved</p>
+  </footer>
+</body>
+</html>

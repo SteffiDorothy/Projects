@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        *{
+            text-decoration: none;
+        }
+        .navbar {
+            background: crimson;
+            font-family: calibri;
+            padding-right: 25px;
+            padding-left: 15px;
+        }
+        .navdiv {
+            display: flex;
+            align-items: center;
+        }
+        .logo a {
+            font-size: 35px;
+            font-weight: 600;
+            color: white;
+        }
+        li {
+            list-style: none;
+            display: inline-block;
+        }
+        li a {
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            margin-right: 25px;
+        }
+        button {
+            background-color: black;
+            margin-left: 10px;
+            border-radius: 10px;
+            padding: 10px;
+            width: 90px;
+        }
+        button a {
+            color: white;
+            font-weight: bold;
+            font-size: 15px;
+        }
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 1200px;
+            margin-top: 50px;  
+        }
+        .signin-form {
+            margin-top: 30px;
+        }
+        .signin-form input {
+            margin-bottom: 15px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="signin-form">
+            <h1>Create an Account</h1>
+            <p> Already have an account? <a href= "/">Login here!</a></p> <br>
+            <form method="POST" action="/createaccount">
+                <p>Fill out the following fields:</p>
+                <input type="text" name="email" placeholder="Email" required> <br>
+                <input type="password" name="password" placeholder="Password "required> <br>
+                <input type="text" name="username" placeholder="Username "required> <br>
+                <input type="number" name="phone" placeholder="Phone Number" required> <br>
+                <input type="text" name="paypref" placeholder="Debit? Credit?" required>
+                <br><br>
+                <button type="submit" class="btn btn-primary">Create Account</button>
+            </form>            
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p>&copy; 2025 The Daily Pick. | All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>

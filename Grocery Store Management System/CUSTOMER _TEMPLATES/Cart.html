@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        *{
+            text-decoration: none;
+        }
+        .navbar {
+            background: crimson;
+            font-family: calibri;
+            padding-right: 25px;
+            padding-left: 15px;
+        }
+        .navdiv {
+            display: flex;
+            align-items: center;
+        }
+        .logo a {
+            font-size: 35px;
+            font-weight: 600;
+            color: white;
+        }
+        li {
+            list-style: none;
+            display: inline-block;
+        }
+        li a {
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            margin-right: 25px;
+        }
+        li a {
+            text-decoration: none;
+        }
+
+        li a:hover {
+            color: #FFC107;
+            text-decoration: none;
+        }
+        button {
+            background-color: black;
+            margin-left: 10px;
+            border-radius: 10px;
+            padding: 10px;
+            width: 90px;
+        }
+        button a {
+            color: white;
+            font-weight: bold;
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar">
+            <div class="logo"><a href="#"></a></div>
+            <ul>
+                <li><a href="/home">Home</a></li>
+                <li><a href="/shop">Shop</a></li>
+                <li><a href="/cart">Cart</a></li>
+                <li><a href="/contactus">Contact</a></li>
+                <li><a href="/recommend">Recommendations</a></li>
+
+            </ul>
+        </div>
+    </nav>
+    <header>
+        <h1>Your Shopping Cart</h1>
+    </header>
+
+    <div class="container">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Product</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Total</th>
+                    <th scope="col">Action</th> <!-- Remove button column -->
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in cart %}
+                    <tr>
+                        <td>{{ item['name'] }}</td>
+                        <td>${{ item['price'] | round(2) }}</td>
+                        <td>{{ item['quantity'] }}</td>
+                        <td>${{ (item['price'] * item['quantity']) | round(2) }}</td>
+                        <td>
+                            <form method="POST" action="/remove_from_cart">
+                                <input type="hidden" name="product_name" value="{{ item['name'] }}">
+                                <button type="submit" class="btn btn-danger">Remove</button>
+                            </form>
+                        </td>
+                    </tr>
+                {% else %}
+                    <tr>
+                        <td colspan="5" class="text-center">Your cart is empty.</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <form method="POST" action="/clear_cart">
+            <button type="submit" class="btn btn-warning">Clear Cart</button>
+        </form>
+
+        <div class="text-right mt-3">
+            <a href="/checkout" class="btn btn-primary">Proceed to Checkout</a>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p>&copy; 2025 The Daily Pick. | All Rights Reserved</p>
+    </footer>
+</body>
+</html>
