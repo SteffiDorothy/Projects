@@ -2,27 +2,40 @@
 
 This folder showcases my data science, machine learning, and business intelligence projects.
 
-## Projects:
-1. **Effectiveness of Data Synthesized by Generative AI in Supervised Image Classification**
-   - Investigated the role of synthetic image data, generated using Generative AI models, in improving the performance of supervised image classification models. This project explores the use of various real-to-synthetic data ratios to train Convolutional Neural Networks (CNN) and assess classification accuracy. Synthetic data is generated using Stable Diffusion to enhance the real dataset and improve model performance.
+---
 
-2. **Exploratory Data Analysis (EDA) on eCommerce Dataset**
-   - Conducted comprehensive data analysis on an eCommerce dataset to uncover customer behavior, sales patterns, and trends.
+## 📂 Projects
 
-3. **Leveraging Chess Game Data for Player Performance Prediction**
-   - Used decision tree regression to predict player performance based on chess game data from Lichess.
+### 1. Credit Card Fraud Detection
+Developed anomaly detection models to identify fraudulent credit card transactions using machine learning.
 
-4. **Performance Dashboards for Human Resources Management**
-   - Developed dashboards to track key HR metrics and enhance decision-making processes using data visualization.
+### 2. Dunkin' Donuts: Leveraging Business Intelligence for Innovation
+Built business intelligence solutions to improve customer experience and operational efficiency at Dunkin' Donuts. Includes dashboards, sentiment analysis, and customer segmentation.
 
-5. **Predicting Financial Market Trends**
-   - Applied machine learning models to forecast stock market trends and optimize investment portfolios.
+### 3. Effectiveness of Data Synthesized by Generative AI in Supervised Image Classification
+Investigated the role of synthetic image data, generated using Generative AI models, in improving supervised image classification. Explored real-to-synthetic data ratios with CNNs and Stable Diffusion.
 
-6. **Dunkin' Donuts: Leveraging Business Intelligence for Innovation**
-   - Built business intelligence solutions to improve customer experience and operational efficiency at Dunkin' Donuts.
+### 4. Exploratory Data Analysis (EDA) on eCommerce Dataset
+Conducted comprehensive data analysis on an eCommerce dataset to uncover customer behavior, sales patterns, and trends.
 
-7. **Credit Card Fraud Detection**
-   - Developed anomaly detection models to identify fraudulent credit card transactions using machine learning.
+### 5. Grocery Store Management System
+Created a system for inventory, customer, and employee management with a database-driven backend and interactive features.
 
-Feel free to explore each project for detailed information and insights.
+### 6. Leveraging Chess Game Data for Player Performance Prediction
+Used decision tree regression to predict player performance based on chess game data from Lichess. Included exploratory data analysis and model evaluation.
 
+### 7. Performance Dashboards for Human Resources Management
+Developed dashboards to track key HR metrics and enhance decision-making processes using data visualization tools.
+
+### 8. Predicting Financial Market Trends
+Applied ARIMA, Prophet, and XGBoost models to forecast stock market trends and optimize investment strategies.
+
+### 9. Scholarly Search Engine for Academic Papers
+Built a scholarly search engine to help users efficiently find academic papers, using ranking algorithms and keyword matching.
+
+### 10. Synthetic Data Toolkit Creation
+Developed a toolkit for generating and evaluating synthetic data for data science applications, focusing on privacy-preserving data use.
+
+---
+
+Feel free to explore each project folder for detailed information, code, reports, and insights.
