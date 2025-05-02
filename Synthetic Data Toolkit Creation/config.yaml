@@ -1,0 +1,51 @@
+# Configuration for the Synthetic Data Toolkit
+
+# --- Directory Paths ---
+paths:
+  data_folder: "./data"
+  output_folder: "./output"
+  models_folder: "./models"
+  # Sub-folders within output
+  plots_folder_name: "plots"
+  metrics_folder_name: "metrics"
+
+# --- Filenames ---
+filenames:
+  synthetic_data: "synthetic_data.csv"
+  metadata: "metadata.json"
+  model: "synthesizer.pkl"
+
+# --- Default Model Hyperparameters ---
+# These can be overridden by user input (e.g., in Streamlit app)
+hyperparameters:
+  TVAE:
+    # Default values from sdv/single_table/base.py and sdv/single_table/tabular_vae.py
+    # User might tune embedding_dim, compress_dims, decompress_dims, batch_size, epochs etc.
+    embedding_dim: 128
+    compress_dims: [128, 128] # Represent tuples as lists in YAML
+    decompress_dims: [128, 128] # Represent tuples as lists in YAML
+    l2scale: 1e-5
+    batch_size: 500
+    epochs: 300 # SDV Default
+    loss_factor: 2
+    cuda: False # Default to False, user environment might differ
+  CTGAN:
+    # Default values from sdv/single_table/base.py and sdv/single_table/ctgan.py
+    # User might tune embedding_dim, generator_dim, discriminator_dim, batch_size, epochs etc.
+    embedding_dim: 128
+    generator_dim: [256, 256]  # Represent tuples as lists in YAML
+    discriminator_dim: [256, 256] # Represent tuples as lists in YAML
+    generator_lr: 2e-4
+    generator_decay: 1e-6
+    discriminator_lr: 2e-4
+    discriminator_decay: 1e-6
+    batch_size: 500 # SDV Default (Note: Must be multiple of pac=10)
+    epochs: 300 # SDV Default
+    pac: 10
+    cuda: False # Default to False
+  GaussianCopula:
+    # Defaults from sdv/single_table/gaussian_copula.py
+    # User might tune distribution types per column via metadata,
+    # but base model has fewer direct hyperparameters configurable like this.
+    default_distribution: 'beta' # Example: SDV default is 'beta'
+    # Other potential args like distribution types are often derived from metadata
