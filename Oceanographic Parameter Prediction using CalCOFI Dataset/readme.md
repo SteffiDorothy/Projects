@@ -4,7 +4,7 @@
 
 **Course:** CS 548: Knowledge Discovery and Data Mining
 
-**Author:** Steffi Dorothy, Neha
+**Author:** Steffi Dorothy
 
 **Instructor:** Prof. Roee Shraga
 
@@ -93,10 +93,10 @@ Potential future work includes:
 
 ---
 
-## Team
+## 💬 Contact
 
-* Steffi Dorothy
-* Neha
+For questions or collaboration opportunities, please reach out via GitHub or [LinkedIn](https://www.linkedin.com/in/steffi-dorothy-9938a21a3/)!
+
   
 ---
 
