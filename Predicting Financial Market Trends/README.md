@@ -1,10 +1,15 @@
 # Predicting Financial Market Trends: An AI Hedge Fund Approach
 
 **Worcester Polytechnic Institute (WPI)**  
+
 **Course:** DS 501- Introduction to Data Science  
+
 **Team:** The Invincibles  
+
 **Team Members:** Darsh Chandura, Niraj Mohabey, Steffi Dorothy
+
 **Instructor:** Prof. T. Ghoshal  
+
 **Date:** 05/02/2024
 
 ---
