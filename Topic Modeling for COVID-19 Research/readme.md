@@ -100,9 +100,13 @@ We conducted a **comparative study** using multiple topic modeling approaches to
    ```bash
    python app.py
 
+---
+
 ## 🙏 Acknowledgments
 
 Thanks to **Worcester Polytechnic Institute** and **Professor Yanhua Li** for guidance and support throughout this project.
+
+---
 
 ## 📞 Contact
 
