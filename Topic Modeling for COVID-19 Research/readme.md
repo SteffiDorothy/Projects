@@ -100,8 +100,6 @@ We conducted a **comparative study** using multiple topic modeling approaches to
    ```bash
    python app.py
 
-**View outputs** in `/outputs` folder or run the interactive demo.
-
 ## 🙏 Acknowledgments
 
 Thanks to **Worcester Polytechnic Institute** and **Professor Yanhua Li** for guidance and support throughout this project.
