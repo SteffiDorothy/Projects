@@ -1,8 +1,16 @@
 # Effectiveness of Data Synthesized by Generative AI in Supervised Image Classification
 
+**Worcester Polytechnic Institute**  
+**CS539: Machine Learning**  
+**Date:** 12/12/2024
+
+---
+
 ## 📌 Overview
 
 This project investigates the role of synthetic image data, generated using Generative AI models, in improving the performance of supervised image classification models. The primary goal is to assess how models perform when trained with various combinations of real and synthetic data.
+
+---
 
 ## 🧠 Motivation
 
@@ -11,6 +19,8 @@ Collecting and labeling large-scale image datasets can be expensive and time-con
 - How synthetic data affects classification accuracy.
 - The ideal synthetic-to-real data ratio for optimal performance.
 - The practicality of using synthetic images in real-world applications.
+
+---
 
 ## 🧪 Methodology
 
@@ -43,6 +53,8 @@ We trained a Convolutional Neural Network (CNN) with different real-to-synthetic
 - Recall
 - F1-Score
 
+---
+
 ## 📁 Folder Structure
 - Final Presentation Group9.pdf # Final presentation slides summarizing the project 
 
@@ -56,6 +68,7 @@ We trained a Convolutional Neural Network (CNN) with different real-to-synthetic
 
 - model_training copy.ipynb # Backup of model training notebook
 
+---
 
 ## 📊 Key Findings
 
@@ -63,11 +76,15 @@ We trained a Convolutional Neural Network (CNN) with different real-to-synthetic
 - Synthetic data helped balance class distributions and introduced useful variations.
 - The quality and class relevance of synthetic images were crucial for maintaining model performance.
 
+---
+
 ## 🚀 Future Work
 
 - Evaluate model generalization using cross-domain datasets.
 - Experiment with other generative models like GANs and VAEs.
 - Use synthetic data in other domains such as medical imaging or remote sensing.
+
+---
 
 ## 🤝 Contributors
 
@@ -76,6 +93,10 @@ We trained a Convolutional Neural Network (CNN) with different real-to-synthetic
 - **Ehu Shubham Shaw**
 - **Bashir Gulistani**
 
+---
+
 ## 📄 License
 
 This project is licensed under the [MIT License](LICENSE).
+
+---
